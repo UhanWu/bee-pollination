@@ -126,7 +126,8 @@ ggp_1 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Apple Trees numbe
 
 farm_plot_1 <- ggp_1 +                                         
   geom_text(aes(label = tree_num)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0") 
+  scale_fill_gradient(low = "white", high = "#1b98e0") +
+  labs(fill = "# of Plantations")
 
 
 
@@ -136,15 +137,18 @@ ggp_2 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot_2 <- ggp_2 +
   geom_text(aes(label = bees_required)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0") +
+  labs(fill = "Bees Requirements")
 
 ggp_3 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Euclidean Distance
   geom_tile(aes(fill = euclid_distance))
 
 
+
 farm_plot_3 <- ggp_3 +
   geom_text(aes(label = euclid_distance)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0")  +
+  labs(fill = "Euclidean Distance")
 
 ggp_4 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Euclidean Distance Index
   geom_tile(aes(fill = dist_index))
@@ -152,7 +156,8 @@ ggp_4 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Euclidean Distanc
 
 farm_plot_4 <- ggp_4 +
   geom_text(aes(label = dist_index)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0")  +
+  labs(fill = "Distance Index")
 
 
 
@@ -213,7 +218,8 @@ ggp1 <- ggplot(ggplotdata1, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot1 <- ggp1 +
   geom_text(aes(label = bees_required2)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0")+
+  labs(fill = "Bees Requirements")
   
 farm_plot1
 ```
@@ -280,7 +286,8 @@ ggp2 <- ggplot(ggplotdata2, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot2 <- ggp2 +
   geom_text(aes(label = bees_required3)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0")  +
+  labs(fill = "Bees Requirements")
   
 farm_plot2
 ```
@@ -347,7 +354,8 @@ ggp3 <- ggplot(ggplotdata3, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot3 <- ggp3 +
   geom_text(aes(label = bees_required4)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0") +
+  labs(fill = "Bees Requirements")
   
 ```
 
@@ -413,7 +421,8 @@ ggp4 <- ggplot(ggplotdata4, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot4 <- ggp4 +
   geom_text(aes(label = bees_required5)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0") + 
+  labs(fill = "Bees Requirements")
   
 ```
 
@@ -482,7 +491,8 @@ ggp5 <- ggplot(ggplotdata5, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot5 <- ggp5 +
   geom_text(aes(label = bees_required6)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  
+  scale_fill_gradient(low = "white", high = "#1b98e0") +
+  labs(fill = "Bees Requirements")
   
 ```
 
@@ -550,7 +560,8 @@ ggp6 <- ggplot(ggplotdata6, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot6 <- ggp6 +
   geom_text(aes(label = bees_required7)) +
-  scale_fill_gradient(low = "white", high = "#FFFFFF")
+  scale_fill_gradient(low = "white", high = "#FFFFFF")+
+  labs(fill = "Bees Requirements")
   
 ```
 
