@@ -550,7 +550,7 @@ ggp6 <- ggplot(ggplotdata6, aes(width,length)) +    # Heatmap: Bees requirements
 
 farm_plot6 <- ggp6 +
   geom_text(aes(label = bees_required7)) +
-  scale_fill_gradient(low = "white", high = "#FFFFFF")  
+  scale_fill_gradient(low = "white", high = "#FFFFFF")
   
 ```
 
