@@ -22,6 +22,15 @@ randomness_data1 <- data.frame(width = rep(1:4, each = 5),   # data created
                    length = 1:5,
                    tree_num = round(abs(rnorm(20, mean=462.5, sd=159.375)), 0),
                    bees_required = sample(round(sample(c(20,21,22,23,24,25), size = 20, replace = TRUE))))
+
+
+randomness_data1|>
+  select(tree_num) |>
+  ggplot(aes(x = tree_num)) +
+  geom_histogram(binwidth = 50, color = "white") +
+  labs(x = "Number of Trees", y = "Frequency")
+
+randomness_data1$tree_num
 ```
 
 ```{r}
@@ -147,7 +156,7 @@ ggp_3 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Euclidean Distanc
 
 farm_plot_3 <- ggp_3 +
   geom_text(aes(label = euclid_distance)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  +
+  scale_fill_gradient(low = "white", high = "#CC0000")  +
   labs(fill = "Euclidean Distance")
 
 ggp_4 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Euclidean Distance Index
@@ -156,7 +165,7 @@ ggp_4 <- ggplot(ggplotdata, aes(width,length)) +    # Heatmap: Euclidean Distanc
 
 farm_plot_4 <- ggp_4 +
   geom_text(aes(label = dist_index)) +
-  scale_fill_gradient(low = "white", high = "#1b98e0")  +
+  scale_fill_gradient(low = "white", high = "#CC0000")  +
   labs(fill = "Distance Index")
 
 
